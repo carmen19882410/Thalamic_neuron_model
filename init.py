@@ -1,3 +1,15 @@
+
+#%%
+
+
+
+#import neuron
+#import neuron.hoc
+#import neuron.hclass3
+#import neuron.psection
+#import cfg
+
+
 from netpyne import sim
 
 # read cfg and netParams from command line arguments if available; otherwise use default

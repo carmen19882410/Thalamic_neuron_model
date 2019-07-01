@@ -12,7 +12,18 @@ netParams = specs.NetParams()  # object of class NetParams to store the network 
 netParams.popParams['S'] = {'cellType': 'PYR', 'numCells': 20, 'cellModel': 'HH'}
 netParams.popParams['M'] = {'cellType': 'PYR', 'numCells': 20, 'cellModel': 'HH'}
 
+netParams.popParams['CA_229py'] = {'cellType': 'DET', 'numCells': 1, 'cellModel': 'HH'}
+#netParams.popParams['CA_229hoc'] = {'cellType': 'DET', 'numCells': 1, 'cellModel': 'blank'}
+
+
+
+
 ## Cell property rules
+
+cellRule = netParams.importCellParams(label = 'CA_229py', conds = {'pop': 'CA_229py'} , fileName = 'cells/CA_229.py', cellName = 'MakeCell', importSynMechs=True)
+#cellRule = netParams.importCellParams(label = 'CA_229hoc', conds = {'pop': 'CA_229hoc'} , fileName = 'cells/CA_229.hoc', cellName = '', importSynMechs=False)
+
+
 cellRule = {'conds': {'cellType': 'PYR'},  'secs': {}} 	# cell rule dict, make an new matrix called secs, in which the data will be spit
 cellRule['secs']['soma'] = {'geom': {}, 'mechs': {}}  														# soma params dict
 cellRule['secs']['soma']['geom'] = {'diam': 18.8, 'L': 18.8, 'Ra': 123.0}  			# big dictionary with all the values we want to add into the model						# soma geometry
