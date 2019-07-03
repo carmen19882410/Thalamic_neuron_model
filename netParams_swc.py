@@ -20,7 +20,7 @@ netParams.popParams['import_swc3py'] = {'cellType': 'DET', 'numCells': 1, 'cellM
 
 ## Cell property rules
 
-cellRule = netParams.importCellParams(label = 'import_swc3py', conds = {'pop': 'import_swcpy'} , fileName = 'import_swc3.py', cellName = 'MakeCell', importSynMechs=False)
+cellRule = netParams.importCellParams(label = 'import_swc3py', conds = {'pop': 'import_swc3py'} , fileName = 'import_swc3.py', cellName = 'MakeCell', importSynMechs=False)
 #cellRule = netParams.importCellParams(label = 'CA_229hoc', conds = {'pop': 'CA_229hoc'} , fileName = 'cells/CA_229.hoc', cellName = '', importSynMechs=False)
 
 

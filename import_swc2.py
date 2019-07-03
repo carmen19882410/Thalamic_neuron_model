@@ -5,7 +5,7 @@
 """
 Created on Mon Jul  1 20:33:29 2019
 
-@author: René Wilbers
+@author: René, Adna and Carmen
 """
 import os
 wdir=os.getcwd()
