@@ -5,14 +5,14 @@ cfg = specs.SimConfig()		# object of class SimConfig to store simulation configu
 
 cfg.duration = 1000 			# Duration of the simulation, in ms
 cfg.dt = 0.025 				# Internal integration timestep to use
-cfg.verbose = False  			# Show detailed messages
-cfg.recordTraces = {'V_soma':{'sec':'soma','loc':0.5,'var':'v'}}  # Dict with traces to record
+cfg.verbose = True  			# Show detailed messages
+cfg.recordTraces = {'V_soma':{'sec':'soma_0', 'loc': 0.5, 'var':'v'}}  # Dict with traces to record
 cfg.recordStep = 0.1 			# Step size in ms to save data (eg. V traces, LFP, etc)
-cfg.filename = 'Carmen_mod'  # Set file output name
+cfg.filename = 'Carmen_mod_swc'  # Set file output name
 cfg.saveJson = True 	
 cfg.printPopAvgRates = True
 cfg.analysis['plotRaster'] = {'saveFig': True} 			# Plot a raster
-cfg.analysis['plotTraces'] = {'include': [20], 'saveFig': True} 			# Plot recorded traces for this list of cells
+cfg.analysis['plotTraces'] = {'include': [0], 'saveFig': True} 			# Plot recorded traces for this list of cells
 
 # Variable parameters (used in netParams)
 cfg.synMechTau2 = 5

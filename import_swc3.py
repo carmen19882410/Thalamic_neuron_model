@@ -59,9 +59,9 @@ for sec in secs:
 
 class TC_cell():
 
-    def __init__(self, add_biophys_axon):
-            self.sec()
-            self.add_biophys_axon = add_biophys_axon
+    def __init__(self):
+            
+            self.add_biophys_axon()
             self.add_biophys_soma()
             self.add_biophys_dend()
             #self.getmorph()
