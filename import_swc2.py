@@ -11,6 +11,7 @@ import os
 wdir=os.getcwd()
 
 from netpyne.support import morphology
+from netpyne import sim
 from neuron import h
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
@@ -56,19 +57,23 @@ for sec in secs:
     #self.add_biophys
 
     #give the cell biphys props
-def add_biophys(soma):       
+def add_biophys_soma(soma):       
     for sec in soma:
         sec.insert('hh')
         #sec.insert('na')
     
-def add_biophys(axon):   
+    
+def add_biophys_axon(axon):   
     for sec in axon:
         sec.insert('hh')
         
-def add_biophys(dend):       
+def add_biophys_dend(dend):       
     for sec in dend:
         sec.insert('pas')
         
-            
+         
+add_biophys_soma(soma)
+add_biophys_axon(axon)
+add_biophys_dend(dend)
 
 
