@@ -17,3 +17,5 @@ cfg.analysis['plotTraces'] = {'include': [0], 'saveFig': True} 			# Plot recorde
 # Variable parameters (used in netParams)
 cfg.synMechTau2 = 5
 cfg.connWeight = 0.01
+cfg.hParams.celsius = 34 # change temperature at which sim is made 
+cfg.hParams.v_init = -70 # change v init 
