@@ -27,7 +27,7 @@ if platform.system() == 'Windows':
 #load cell as mycell
 #    def getmorph(self):
 myCell= morphology.Cell()
-morphology.load(filename=os.path.join(wdir,'SWC', 'AA_0266.swc'), cell=myCell)
+morphology.load(filename=os.path.join(wdir,'SWC', 'MN_morphology.swc'), cell=myCell)
 
 #plot loaded cell
 fig = plt.figure()
@@ -67,7 +67,7 @@ class TC_cell():
     
     def add_biophys_all(self):
         for sec in secs_all:
-            sec.Ra = 178 #add a axial resistance of 100ohm per square cm
+            sec.Ra = 100 #add a axial resistance of 100ohm per square cm
             sec.cm = 0.8 # Membrane capacitance in micro Farads / cm^2
 
     #give the cell biphys props
