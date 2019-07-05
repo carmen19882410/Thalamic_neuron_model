@@ -3,7 +3,7 @@ from netpyne import specs
 # Simulation options
 cfg = specs.SimConfig()		# object of class SimConfig to store simulation configuration
 
-cfg.duration = 1000 			# Duration of the simulation, in ms
+cfg.duration = 500 			# Duration of the simulation, in ms
 cfg.dt = 0.025 				# Internal integration timestep to use
 cfg.verbose = True  			# Show detailed messages
 cfg.recordTraces = {'V_soma':{'sec':'soma_0', 'loc': 0.5, 'var':'v'}}  # Dict with traces to record

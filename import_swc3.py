@@ -54,11 +54,6 @@ for sec in secs:
         dend.append(sec)
 
 
-
-
-
-
-
 class TC_cell():
 
     def __init__(self):
@@ -72,22 +67,22 @@ class TC_cell():
     
     def add_biophys_all(self):
         for sec in secs_all:
-            sec.Ra = 100 #add a axial resistance of 100ohm per square cm
-            sec.cm = 1 # Membrane capacitance in micro Farads / cm^2
+            sec.Ra = 178 #add a axial resistance of 100ohm per square cm
+            sec.cm = 0.8 # Membrane capacitance in micro Farads / cm^2
 
     #give the cell biphys props
     def add_biophys_soma(self):       
         for sec in soma:
-            #sec.insert('hh')
-            sec.insert('na')
-            sec.insert('kv')
+            sec.insert('hh')
+            #sec.insert('na')
+            #sec.insert('kv')
             
     
     def add_biophys_axon(self):   
         for sec in axon:
-            #sec.insert('hh')
-            sec.insert('na')
-            sec.insert('kv')
+            sec.insert('hh')
+            #sec.insert('na')
+            #sec.insert('kv')
         
     def add_biophys_dend(self):       
         for sec in dend:
